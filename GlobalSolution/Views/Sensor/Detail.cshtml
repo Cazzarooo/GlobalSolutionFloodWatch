@@ -1,0 +1,26 @@
+﻿@model GlobalSolution.Models.SensorModel
+
+<h2>Sensor Details</h2>
+
+<div>
+    <h4>Sensor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DadosSensor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DadosSensor)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LocalizacaoSensor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LocalizacaoSensor)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<GlobalSolution.Models.HistoricoModel>
+
+<p>
+    <a asp-action="Create">Criar Novo</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Armazenamento de Dados
+            </th>
+            <th>
+                Tipo de Dados
+            </th>
+            <th>
+                Ano de Dados
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var historico in Model)
+        {
+            <tr>
+                <td>
+                    @historico.ArmazenamentoDados
+                </td>
+                <td>
+                    @historico.TipoDados
+                </td>
+                <td>
+                    @historico.AnoDados
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@historico.Id">Editar</a> |
+                    <a asp-action="Detail" asp-route-id="@historico.Id">Detalhe</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

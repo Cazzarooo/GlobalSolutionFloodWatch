@@ -1,0 +1,48 @@
+﻿@model IEnumerable<GlobalSolution.Models.SensorModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Sensores</h1>
+
+<p>
+    <a asp-action="Create">Novo Sensor</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosSensor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalizacaoSensor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DadosSensor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LocalizacaoSensor)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdSensor">Editar</a> |
+                    <a asp-action="Detail" asp-route-id="@item.IdSensor">Detalhes</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

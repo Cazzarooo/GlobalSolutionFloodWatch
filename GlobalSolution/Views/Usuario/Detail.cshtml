@@ -1,0 +1,27 @@
+﻿@model GlobalSolution.Models.UsuarioModel
+
+<div class="row">
+    <dt>
+        @Html.DisplayNameFor(model => model.Nome)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Nome)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.DataNascimento)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.DataNascimento)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Localizacao)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Localizacao)
+    </dd>
+    @* Adicione outras propriedades específicas do modelo de Usuário aqui, se necessário *@
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
